@@ -15,7 +15,6 @@ export class WeatherApiService {
 
   async getWeatherByCity(city: string): Promise<NormalizedWeather> {
     const apiKey = this.configService.get<string>('weather.openWeatherApiKey');
-    console.log('API Key:', apiKey);
     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(city)}`;
     try {
       const { data } = await this.httpService.axiosRef.get(url);

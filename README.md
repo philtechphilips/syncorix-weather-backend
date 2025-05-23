@@ -1,85 +1,69 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Weather Backend API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+A backend API for weather information, built with [NestJS](https://nestjs.com/) and powered by the OpenWeather API. This project provides endpoints to fetch weather data for various locations.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Demo
 
-## Description
+You can try the live demo here: [https://syncorix-weather-backend.onrender.com](https://syncorix-weather-backend.onrender.com)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+> **Note:** This app is hosted on [Render](https://render.com/) free service. After a period of inactivity, the server spins down. When you access the demo after such inactivity, you may see a loading screen for up to a minute while the server starts up again.
 
-## Project setup
+## Features
+- Fetch current weather data for cities and countries
+- Built with NestJS and TypeScript
+- Uses OpenWeather API for accurate weather information
 
-```bash
-$ npm install
-```
+## Getting Started
 
-## Compile and run the project
+### Prerequisites
+- [Node.js](https://nodejs.org/) v20.x
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-```bash
-# development
-$ npm run start
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+   cd weather-be
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+   If you encounter dependency issues, run:
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+3. Create a `.env` file in the root directory and add your OpenWeather API key:
+   ```env
+   OPEN_WEATHER_API_KEY=your_api_key_here
+   ```
+   You can obtain a free API key from [weatherapi.com](https://www.weatherapi.com/).
 
-# watch mode
-$ npm run start:dev
+### Running the App
 
-# production mode
-$ npm run start:prod
-```
+- **Development:**
+  ```bash
+  npm run start:dev
+  ```
+- **Production:**
+  ```bash
+  npm run start:prod
+  ```
 
-## Run tests
+### Testing
+- **Unit tests:**
+  ```bash
+  npm run test
+  ```
+- **E2E tests:**
+  ```bash
+  npm run test:e2e
+  ```
+- **Test coverage:**
+  ```bash
+  npm run test:cov
+  ```
 
-```bash
-# unit tests
-$ npm run test
+## API Documentation
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+API documentation (Swagger UI) is available at `/api` when running the app locally or on the demo URL.
